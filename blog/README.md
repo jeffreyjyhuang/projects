@@ -4,7 +4,7 @@ Here are the jupyter notebooks that were used to write my blog posts.
 Take a look at [jeffrey-huang.ca](https://jeffrey-huang.ca) to see them.
 
 Here is a tentative table of contents.
-1. [Introduction](https://jeffrey-huang.ca/2020/12/28/introduction/)
+1. [Introduction](https://jeffrey-huang.ca/blog/)
 2. [What is Machine Learning?](https://jeffrey-huang.ca/2020/12/27/what-is-machine-learning/)
 3. [Evaluating Binary Classifiers](https://jeffrey-huang.ca/2020/12/28/evaluating-binary-classifiers/)
 4. [Multi-Class Classifiers](https://jeffrey-huang.ca/2021/01/01/multi-class-classification/)
