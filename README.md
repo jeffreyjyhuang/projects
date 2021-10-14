@@ -14,6 +14,9 @@ This is a repository that I have created to track my progress in Data Science re
 ## Premier League 
 - [Premier League Insights](https://github.com/jeffreyjyhuang/projects/tree/master/premier_league):
 	- [Cleaning and Sraping TransferMarkt Data](https://github.com/jeffreyjyhuang/projects/blob/master/premier_league/1_scraping_transfermarkt.ipynb): Scraped www.transfermarkt.com using BeautifulSoup. I created a function that can scrape any soccer team. Compiled a dataset with the twenty teams from the 2020-2021 Premier League.
+
+## Kaggle
+- [Predicting Australian Weather](https://www.kaggle.com/jeffreyjyhuang/australian-weather-logistic-regression-classifier/notebook): Performed EDA and feature engineering before fitting a logistic regression classifier to predict if it will rain on a given day in Australia.
 	
 ## English Premier League Dashboard (*Coming Soon*)
 
