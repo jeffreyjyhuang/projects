@@ -2,7 +2,7 @@
 
 ## About
 
-This is a repository that I have created to track my progress in Data Science related topics in order to organise my knowledge and goals. Feel free to head to my website at [jeffrey-huang.ca](https://jeffrey-huang.ca) to see more.
+This is a repository that I have created to track my progress in Data Science related topics in order to organise my knowledge and goals. 
 
 ## Restaurant Success
 - [Predicting Restaurant Success](https://github.com/jeffreyjyhuang/restaurant-demographics): Scraped Statistics Canada census data and extracted Yelp's Public Dataset to predict restaurant success with demographic data. Focused on restuarants in Downtown Toronto. 
