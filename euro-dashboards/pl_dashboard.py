@@ -169,7 +169,7 @@ def main():
                             font_family="verdana",
                             font_color="black",
                             legend=dict(orientation="h", y = 1.05, 
-                            x = 0.5, title = None),
+                            x = 0.3, title = None),
                             plot_bgcolor = '#F4F4F0')
         st.plotly_chart(cleansheet_bar)
 
@@ -200,7 +200,7 @@ def main():
                             font_family="verdana",
                             font_color="black",
                             legend=dict(orientation="h", y = 1.05, 
-                            x = 0.5, title = None),
+                            x = 0.3, title = None),
                             plot_bgcolor = '#F4F4F0')
         st.plotly_chart(FTS_bar)
     with col3:
@@ -230,7 +230,7 @@ def main():
                             font_family="verdana",
                             font_color="black",
                             legend=dict(orientation="h", y = 1.05, 
-                            x = 0.5, title = None),
+                            x = 0.3, title = None),
                             plot_bgcolor = '#F4F4F0')
         st.plotly_chart(penalty_bar)
 
@@ -309,7 +309,7 @@ def main():
                             font_family="verdana",
                             font_color="black",
                             legend=dict(orientation="h", y = 1.1, 
-                            x = 0.75 , title = None),
+                            x = 0.3 , title = None),
                             plot_bgcolor = '#F4F4F0')
 
 
@@ -352,7 +352,7 @@ def main():
                             font_family="verdana",
                             font_color="black",
                             legend=dict(orientation="h", y = 1.1, 
-                            x = 0.75 , title = None),
+                            x = 0.3 , title = None),
                             plot_bgcolor = '#F4F4F0')
     mid, col1, col2, mid = st.beta_columns([10,30,30,10])
 
