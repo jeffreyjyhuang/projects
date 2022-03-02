@@ -11,7 +11,7 @@ from plotly.subplots import make_subplots
 
 # Color Palette: #E63946, #F4F4F0, #A8DADC, #457B9D, #1D3557
 
-@st.cache(allow_output_mutation=True)
+@st.cache(allow_output_mutation=True, ttl = 24*60*60)
 def teams_data(season, league):
 
     # Getting Standings Data
