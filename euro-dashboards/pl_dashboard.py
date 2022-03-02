@@ -68,7 +68,8 @@ def main():
     mid, middle_col, mid = st.beta_columns([20,60,20])
     with middle_col:
         st.title("European Soccer Leagues")
-        st.markdown("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis massa tincidunt dui ut ornare. Eros donec ac odio tempor orci. Imperdiet proin fermentum leo vel orci porta non pulvinar. In est ante in nibh mauris cursus. Auctor elit sed vulputate mi sit amet. Nunc consequat interdum varius sit amet mattis vulputate. Mi in nulla posuere sollicitudin aliquam. Neque gravida in fermentum et sollicitudin ac. Orci eu lobortis elementum nibh tellus. Vitae sapien pellentesque habitant morbi tristique senectus. Justo donec enim diam vulputate ut pharetra sit amet. Habitant morbi tristique senectus et netus et malesuada. Pellentesque diam volutpat commodo sed. Amet risus nullam eget felis eget nunc lobortis mattis.")
+        st.markdown("_By Jeffrey Huang_")
+        st.markdown("This is an interactive dashboard that I use to keep track of the top 5 European Soccer leagues. This includes the Premier League (English League), La Liga (Spanish League), Bundesliga (German League), Ligue 1 (French League) and Serie A (Italian League). The data updates every day and is pulled from a series of API calls. ")
         # STANDINGS
         st.header("Standings")
         selected_league = st.selectbox("Select league(s)", options = 
@@ -114,7 +115,7 @@ def main():
 
         # GFGA STATS
         st.header("Defensive and Offensive Metrics")
-        st.markdown("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis massa tincidunt dui ut ornare. Eros donec ac odio tempor orci. Imperdiet proin fermentum leo vel orci porta non pulvinar. In est ante in nibh mauris cursus. Auctor elit sed vulputate mi sit amet. Nunc consequat interdum varius sit amet mattis vulputate. Mi in nulla posuere sollicitudin aliquam. Neque gravida in fermentum et sollicitudin ac. Orci eu lobortis elementum nibh tellus. Vitae sapien pellentesque habitant morbi tristique senectus. Justo donec enim diam vulputate ut pharetra sit amet. Habitant morbi tristique senectus et netus et malesuada. Pellentesque diam volutpat commodo sed. Amet risus nullam eget felis eget nunc lobortis mattis.")
+        st.markdown("Below is a plot that illustrates a team’s defensive and offensive strengths. The Y axis denotes the average number of goals a team concedes per game, and the X axis denotes the average number of goals a team concedes per game. With this, we can interpret any teams on the top left quadrant to be defensively and offensively weak. Similarly, teams on the bottom right are defensively and offensively strong. Feel free to hover over any points that may have overlapping labels.")
         GFGA_scatter = px.scatter(team_data,
                     x = team_data['goals.for.average.total'].apply(float),
                     y = team_data['goals.against.average.total'].apply(float),
@@ -139,7 +140,7 @@ def main():
                 
         st.plotly_chart(GFGA_scatter)
         st.header("More League Statistics")
-        st.markdown("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis massa tincidunt dui ut ornare. Eros donec ac odio tempor orci. Imperdiet proin fermentum leo vel orci porta non pulvinar. In est ante in nibh mauris cursus. Auctor elit sed vulputate mi sit amet. Nunc consequat interdum varius sit amet mattis vulputate. Mi in nulla posuere sollicitudin aliquam. Neque gravida in fermentum et sollicitudin ac. Orci eu lobortis elementum nibh tellus. Vitae sapien pellentesque habitant morbi tristique senectus. Justo donec enim diam vulputate ut pharetra sit amet. Habitant morbi tristique senectus et netus et malesuada. Pellentesque diam volutpat commodo sed. Amet risus nullam eget felis eget nunc lobortis mattis.")
+        st.markdown("Here are more statistics that are broken down by teams. The first plot simply breaks down the number of clean sheets per team in both home and away games. The second plot measures the number of ‘missed opportunities’. These are opportunities in which teams missed an open net goal. Lastly, the third plot measures the number of penalties that are either scored or missed.")
     ## Columns
     mid,col1, col2, col3,mid= st.beta_columns([8,25,25,25,8])
     with col1:
@@ -238,7 +239,7 @@ def main():
     mid, middle, mid = st.beta_columns([20,60,20])
     with middle: 
         st.header("Team Data")
-        st.markdown("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis massa tincidunt dui ut ornare. Eros donec ac odio tempor orci. Imperdiet proin fermentum leo vel orci porta non pulvinar. In est ante in nibh mauris cursus. Auctor elit sed vulputate mi sit amet. Nunc consequat interdum varius sit amet mattis vulputate. Mi in nulla posuere sollicitudin aliquam. Neque gravida in fermentum et sollicitudin ac. Orci eu lobortis elementum nibh tellus. Vitae sapien pellentesque habitant morbi tristique senectus. Justo donec enim diam vulputate ut pharetra sit amet. Habitant morbi tristique senectus et netus et malesuada. Pellentesque diam volutpat commodo sed. Amet risus nullam eget felis eget nunc lobortis mattis.")
+        st.markdown("Choose a team from the drop down list below to view their statistics. This is where you can view the team’s milestones in terms of winning, drawing or losing streaks, as well as their performance at home or away. Lastly, there are plots that visualizes the team’s performance across 90 minutes of soccer. This is achieved by categorizing the 90 minutes the soccer game into 15 minute bins and plotting accordingly.")
         # TEAM SELECTION & LOGO
         team_select_options = list(league_data.index.sort_values(ascending = True))
         ## Columns
@@ -305,7 +306,7 @@ def main():
                             titlefont_size = 13,
                             tickfont_size = 13,
                             showgrid=True,)\
-            .update_layout(height = 500, width = 800,
+            .update_layout(height = 500, width = 700,
                             font_family="verdana",
                             font_color="black",
                             legend=dict(orientation="h", y = 1.1, 
@@ -348,7 +349,7 @@ def main():
                             titlefont_size = 13,
                             tickfont_size = 13,
                             showgrid=True,)\
-            .update_layout(height = 500, width = 800,
+            .update_layout(height = 500, width = 700,
                             font_family="verdana",
                             font_color="black",
                             legend=dict(orientation="h", y = 1.1, 
