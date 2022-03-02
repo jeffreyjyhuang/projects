@@ -133,7 +133,7 @@ def main():
                                     tickfont_size = 13,
                                     showgrid=True,)\
                     .update_traces(textposition = 'top center')\
-                    .update_layout(height = 1200, width = 1200,
+                    .update_layout(height = 1100, width = 1100,
                                     font_family="verdana",
                                     font_color="black",
                                     plot_bgcolor = '#F4F4F0')
